@@ -1,0 +1,334 @@
+/* Correções globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Estilo container para centralizar conteúdo */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0044cc;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Para distribuir os itens corretamente */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Estilização do menu de navegação */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffcc00;
+}
+
+.cta-header {
+    background-color: #ff0066;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-header:hover {
+    background-color: #ff3366;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0044cc, #00ccff);
+    color: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta {
+    background-color: #ff0066;
+    padding: 15px 30px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta:hover {
+    background-color: #ff3366;
+}
+
+/* Estilo Seções Gerais */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0044cc;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Seção Nossa História */
+.historia {
+    background-color: #e6f7ff;
+}
+
+.historia h2 {
+    color: #003366;
+}
+
+.historia p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Seção Produtos */
+.produtos {
+    background-color: #fff4e6;
+}
+
+.produtos h2 {
+    color: #cc5500;
+}
+
+.produtos p {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Seção Serviços */
+.servicos {
+    background-color: #f0f4ff;
+}
+
+.servicos h2 {
+    color: #004080;
+}
+
+.servicos p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Seção Contato */
+.contato {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    border-top: 2px solid #0044cc;
+}
+
+.contato h2 {
+    color: #0044cc;
+}
+
+.contato p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contato p + p {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff0066;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna para evitar sobreposição */
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+    
+    /* Corrigindo botões empilhados */
+    .cta-header, .cta {
+        display: inline-block;
+        margin-bottom: 10px; /* Espaçamento entre os botões */
+    }
+}
+/* Estilo da barra de navegação */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #0044cc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: height 0.4s ease-in-out;
+    height: 100px; /* Tamanho inicial da navbar */
+}
+
+/* Adicionando padding à seção hero */
+section.hero {
+    padding-top: 100px; /* O mesmo valor da altura inicial da barra de navegação */
+    height: calc(100vh - 100px); /* Ajuste para que a hero section tenha altura total da viewport, menos a altura da navbar */
+    background-image: url('seu-imagem-hero.jpg'); /* Exemplo de background */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: font-size 0.4s ease-in-out;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: font-size 0.4s ease-in-out;
+}
+
+.cta-header {
+    background-color: #ff0066;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, font-size 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
