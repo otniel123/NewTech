@@ -34,3 +34,21 @@ window.addEventListener("scroll", function() {
 
   lastScrollTop = scrollTop;
 });
+// Texto a ser digitado
+const text = "Desbloqueie o Potencial da Sua Loja de Informática";
+const speed = 100;  // Velocidade da digitação (em milissegundos)
+
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("typed-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);  // Chama a função de novo até terminar
+    }
+}
+
+// Inicia o efeito de digitação ao carregar a página
+window.onload = function() {
+    typeEffect();
+};
