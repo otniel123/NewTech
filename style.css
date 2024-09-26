@@ -92,15 +92,17 @@ header {
 }
 
 .hero h2 {
-    font-size: 2.8rem;
+    font-size: 1rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    color: white;
 }
 
 .cta {
@@ -289,7 +291,7 @@ header {
 section.hero {
     padding-top: 100px; /* O mesmo valor da altura inicial da barra de navegação */
     height: calc(100vh - 100px); /* Ajuste para que a hero section tenha altura total da viewport, menos a altura da navbar */
-    background-image: url('seu-imagem-hero.jpg'); /* Exemplo de background */
+    background-image: url('./images/BackgroundHero.png'); /* Exemplo de background */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -356,4 +358,88 @@ section.hero {
     51%, 100% {
         opacity: 0;
     }
+}
+
+
+
+
+
+
+
+.about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-content .cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-content .cta:hover {
+    background-color: #e64a19;
+}
+
+.about-person {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-person .person-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.about-person .person-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.about-person .person-info p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 0.9rem;
 }
