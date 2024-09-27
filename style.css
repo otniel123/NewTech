@@ -1,4 +1,12 @@
 /* Correções globais */
+:root{
+    --primarycolor:#081A40;
+    --secondarycolor:#010440;
+    --buttoncolor:#d9984A;
+    --buttonhover:#f2b950;
+    --others:#bf522A;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,20 +27,27 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #0044cc;
-    padding: 20px 0;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* Para distribuir os itens corretamente */
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    background-color: var(--primarycolor);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: height 0.4s ease-in-out;
+    height: 100px; /* Tamanho inicial da navbar */
 }
+
 
 .logo h1 {
     color: white;
@@ -61,7 +76,7 @@ header {
 }
 
 .nav-list a:hover {
-    color: #ffcc00;
+    color: var(--buttonhover);
 }
 
 .cta-header {
@@ -79,16 +94,18 @@ header {
 }
 
 /* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #0044cc, #00ccff);
-    color: white;
-    padding: 60px 0;
+section.hero {
+    padding-top: 100px; /* O mesmo valor da altura inicial da barra de navegação */
+    height: calc(100vh - 100px); /* Ajuste para que a hero section tenha altura total da viewport, menos a altura da navbar */
+    background-image: url('./images/BackgroundHero.png'); /* Exemplo de background */
+    background-size: 1905px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    background-color: white;
     text-align: center;
-    flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
 }
 
 .hero h2 {
@@ -106,7 +123,7 @@ header {
 }
 
 .cta {
-    background-color: #ff0066;
+    background-color: var(--buttoncolor);
     padding: 15px 30px;
     color: white;
     font-size: 18px;
@@ -117,7 +134,7 @@ header {
 }
 
 .cta:hover {
-    background-color: #ff3366;
+    background-color: var(--buttonhover);
 }
 
 /* Estilo Seções Gerais */
@@ -272,35 +289,8 @@ footer a:hover {
     }
 }
 /* Estilo da barra de navegação */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #0044cc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: height 0.4s ease-in-out;
-    height: 100px; /* Tamanho inicial da navbar */
-}
 
 /* Adicionando padding à seção hero */
-section.hero {
-    padding-top: 100px; /* O mesmo valor da altura inicial da barra de navegação */
-    height: calc(100vh - 100px); /* Ajuste para que a hero section tenha altura total da viewport, menos a altura da navbar */
-    background-image: url('./images/BackgroundHero.png'); /* Exemplo de background */
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    background-color: white;
-    text-align: center;
-    font-size: 2rem;
-}
 
 .logo h1 {
     color: white;
@@ -393,7 +383,7 @@ section.hero {
 
 .about-content h2 {
     font-size: 2rem;
-    color: #333;
+    color: var(--secondarycolor);
     margin-bottom: 20px;
 }
 

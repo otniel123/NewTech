@@ -19,8 +19,8 @@ window.addEventListener("scroll", function() {
   if (scrollTop > lastScrollTop) {
     // Rolando para baixo - diminuir navbar e seu conteúdo
     navbar.style.height = "60px";  // Diminui a altura da barra de navegação
-    logoText.style.fontSize = "18px";  // Diminui o tamanho da logo
-    navLinks.forEach(link => link.style.fontSize = "14px");  // Diminui o tamanho dos links do menu
+    //logoText.style.fontSize = "18px";  // Diminui o tamanho da logo
+    //navLinks.forEach(link => link.style.fontSize = "14px");  // Diminui o tamanho dos links do menu
     ctaButton.style.padding = "5px 10px";  // Diminui o padding do botão CTA
     ctaButton.style.fontSize = "14px";  // Diminui o tamanho da fonte do botão CTA
   } else {
@@ -36,7 +36,7 @@ window.addEventListener("scroll", function() {
 });
 // Texto a ser digitado
 const text = "Desbloqueie o Potencial da Sua Loja de Informática";
-const speed = 100;  // Velocidade da digitação (em milissegundos)
+const speed = 45;  // Velocidade da digitação (em milissegundos)
 
 let index = 0;
 
