@@ -35,7 +35,7 @@ window.addEventListener("scroll", function() {
   lastScrollTop = scrollTop;
 });
 // Texto a ser digitado
-const text = "Desbloqueie o Potencial da Sua Loja de Informática";
+const text = "A melhor loja de informática de blumenau. simplesmente, newtech!";
 const speed = 45;  // Velocidade da digitação (em milissegundos)
 
 let index = 0;
@@ -52,3 +52,21 @@ function typeEffect() {
 window.onload = function() {
     typeEffect();
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+  function checkScroll() {
+      fadeInElements.forEach(function(element) {
+          const position = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+
+          if (position < screenPosition) {
+              element.classList.add('visible');
+          }
+      });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+});
