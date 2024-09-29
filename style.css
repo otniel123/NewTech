@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -49,11 +53,8 @@ header {
 }
 
 
-.logo h1 {
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.logo {
+    align-items: center;
 }
 
 /* Estilização do menu de navegação */
@@ -96,9 +97,12 @@ header {
 /* Hero Section */
 section.hero {
     padding-top: 100px; /* O mesmo valor da altura inicial da barra de navegação */
-    height: 100vh; /* Ajuste para que a hero section tenha altura total da viewport, menos a altura da navbar */
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport para garantir que cubra a tela inteira */
     background-image: url('./images/BackgroundHero.png'); /* Exemplo de background */
-    background-size: 1905px;
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center center; /* Centraliza a imagem no eixo vertical e horizontal */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +110,8 @@ section.hero {
     background-color: white;
     text-align: center;
     font-size: 2rem;
+    margin: 0; /* Remove qualquer margem padrão */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos nas dimensões */
 }
 
 .hero h2 {

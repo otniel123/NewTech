@@ -51,6 +51,7 @@ function typeEffect() {
 // Inicia o efeito de digitação ao carregar a página
 window.onload = function() {
     typeEffect();
+    
 };
 
 
@@ -70,3 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', checkScroll);
 });
+
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual'; // Desativa o comportamento padrão de restaurar o scroll
+}
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0); // Força o scroll para o topo antes de recarregar
+};
