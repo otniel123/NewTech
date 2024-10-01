@@ -25,6 +25,12 @@ body {
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Estilo container para centralizar conteúdo */
 .container {
     width: 90%;
@@ -793,3 +799,141 @@ footer a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================RESPONSIVIDADE======================================================= */
+
+
+/* Estilos do menu hamburguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--primarycolor);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-list.show-menu {
+        transform: translateX(0);
+    }
+
+    .nav-list li {
+        margin: 20px 0;
+    }
+}
+
+
+/* Grid de produtos e serviços para telas pequenas */
+@media (max-width: 768px) {
+    .products-grid, .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .menu-toggle{
+        margin-left: 20%;
+    }
+    .logo{
+        margin-top: 1%;
+        margin-right: 20%;
+    }
+    .about-grid{
+        display: flex;
+    }
+    .about-content{
+        margin-bottom: 10%;
+    }
+    .about-image {  /* Classe das imagens */
+        display: none; /* Oculta as imagens */
+        width: 0px;
+        height: 0px;
+    }
+
+    
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+    .products-grid, .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-header {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .about-content h2, .about-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 768px) {
+    section.hero {
+        font-size: 1.5rem;
+        padding-top: 70px;
+    }
+
+    #typed-text {
+        font-size: 2rem;
+    }
+
+    .cta {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}

@@ -79,3 +79,12 @@ if (history.scrollRestoration) {
 window.onbeforeunload = function () {
     window.scrollTo(0, 0); // Força o scroll para o topo antes de recarregar
 };
+
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+
+mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('show-menu');
+    
+});
