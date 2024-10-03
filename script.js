@@ -88,3 +88,31 @@ mobileMenu.addEventListener('click', () => {
     navList.classList.toggle('show-menu');
     
 });
+
+
+const mobileItem = document.querySelector('.Item') 
+
+mobileItem.addEventListener('click', () => {
+    navList.classList.remove('show-menu');
+    
+});
+
+const mobileItem1 = document.querySelector('.Item1') 
+
+mobileItem1.addEventListener('click', () => {
+    navList.classList.remove('show-menu');
+    
+});
+const mobileItem2 = document.querySelector('.Item2') 
+
+mobileItem2.addEventListener('click', () => {
+    navList.classList.remove('show-menu');
+    
+});
+const mobileItem3 = document.querySelector('.Item3') 
+
+mobileItem3.addEventListener('click', () => {
+    navList.classList.remove('show-menu');
+    
+});
+

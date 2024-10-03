@@ -813,7 +813,6 @@ footer a:hover {
 /* ========================================================RESPONSIVIDADE======================================================= */
 
 
-/* Estilos do menu hamburguer */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -853,15 +852,11 @@ footer a:hover {
     .nav-list.show-menu {
         transform: translateX(0);
     }
+    
 
     .nav-list li {
         margin: 20px 0;
     }
-}
-
-
-/* Grid de produtos e serviços para telas pequenas */
-@media (max-width: 768px) {
     .products-grid, .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -885,7 +880,50 @@ footer a:hover {
         height: 0px;
     }
 
-    
+    /* Estilos adicionados para a aba de avaliações */
+    .reviews-tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .reviews-tab h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .review {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        text-align: left;
+    }
+
+    .review:last-child {
+        border-bottom: none;
+    }
+
+    /* Centraliza e ajusta as avaliações em telas pequenas */
+    .reviews-tab .review-content {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+
+/* Grid de produtos e serviços para telas pequenas */
+@media (max-width: 768px) {
+    /* Ajuste de espaço na aba de avaliações */
+    .reviews-tab {
+        margin: 20px 0;
+    }
 }
 
 /* Para tablets */
@@ -894,8 +932,26 @@ footer a:hover {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
+
+    /* Ajustes para a aba de avaliações em tablets */
+    .reviews-tab {
+        padding: 30px;
+    }
+
+    .reviews-tab h2 {
+        font-size: 1.8rem;
+    }
+
+    .review {
+        padding: 15px;
+    }
+
+    .reviews-tab .review-content {
+        font-size: 1.2rem;
+    }
 }
 
+/* Ajustes gerais para texto e layout */
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 1.5rem;
@@ -922,6 +978,7 @@ footer a:hover {
         font-size: 1.8rem;
     }
 }
+
 @media (max-width: 768px) {
     section.hero {
         font-size: 1.5rem;
@@ -935,5 +992,140 @@ footer a:hover {
     .cta {
         padding: 10px 20px;
         font-size: 16px;
+    }
+
+    /* Ajuste de layout final para a aba de avaliações */
+    .reviews-tab {
+        width: 100%;
+    }
+}
+/* Responsividade para a seção de avaliações */
+
+/* Estilo geral para avaliações */
+.reviews-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-header h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.review-stars {
+    color: #FFD700;
+}
+
+.review-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Para telas pequenas, exibir as avaliações em uma coluna */
+@media (max-width: 768px) {
+     .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-header h3 {
+        font-size: 1rem;
+    }
+
+    .review-card p {
+        font-size: 0.9rem;
+    } 
+}
+
+/* Para tablets, exibir as avaliações em duas colunas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Ajustes para a seção de contato em telas pequenas */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espaçamento entre os itens */
+    }
+
+    .contact-info, .contact-form {
+        width: 100%; /* Garantir que os elementos ocupem 100% da largura disponível */
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info h3, .contact-form h3 {
+        font-size: 1.5rem; /* Ajuste de tamanho para caber melhor na tela */
+    }
+
+    .contact-info p, .contact-form label, .contact-form input, .contact-form textarea {
+        font-size: 1rem; /* Reduzindo levemente o tamanho da fonte */
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%; /* Largura completa para inputs e textarea */
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+    }
+
+    .contact-form button {
+        width: 100%; /* O botão ocupará toda a largura disponível */
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+
+    .social-media a {
+        font-size: 1.5rem; /* Ajustando o tamanho dos ícones de redes sociais */
     }
 }
