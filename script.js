@@ -21,14 +21,14 @@ window.addEventListener("scroll", function() {
   if (scrollTop > lastScrollTop) {
     // Rolando para baixo - diminuir navbar e seu conteúdo
     navbar.style.height = "60px";  // Diminui a altura da barra de navegação
-    navList.style.top = "60px";
+    navList.style.top = "59px";
     
 
     ctaButton.style.padding = "5px 10px";  // Diminui o padding do botão CTA
     ctaButton.style.fontSize = "14px";  // Diminui o tamanho da fonte do botão CTA
     if (navList.classList.contains('show-menu')) {
         navbar.style.height = "100px";
-        navList.style.top = "100px"; }
+        navList.style.top = "101px"; }
   } 
 
 
