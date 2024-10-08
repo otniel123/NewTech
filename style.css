@@ -31,7 +31,7 @@ img {
 }
 
 
-/* Estilo container para centralizar conteúdo */
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -42,7 +42,11 @@ img {
     align-items: center;
 }
 
-/* Cabeçalho */
+.avaliacao{
+    text-decoration: none;
+}
+
+/* --------------------------------Cabeçalho--------------------------- */
 header {
     position: fixed;
     width: 100%;
@@ -58,9 +62,15 @@ header {
     height: 100px; /* Tamanho inicial da navbar */
 }
 
+.avaliacao{
+    text-decoration: none;
+}
+
+
+
+
 /* ------------------------------------------HERO----------------------------------------- */
 
-/* Adicionando padding à seção hero */
 
 .logo h1 {
     color: white;
@@ -124,11 +134,11 @@ header {
     align-items: center;
 }
 
-/* Estilização do menu de navegação */
+
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 20px; 
 }
 
 .nav-list li {
@@ -161,13 +171,13 @@ header {
     background-color: #ff3366;
 }
 section.hero {
-    padding-top: 100px; /* O mesmo valor da altura inicial da barra de navegação */
-    height: 100vh; /* Altura total da viewport */
-    width: 100vw; /* Largura total da viewport para garantir que cubra a tela inteira */
-    background-image: url('./images/BackgroundHero.png'); /* Exemplo de background */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center center; /* Centraliza a imagem no eixo vertical e horizontal */
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    padding-top: 100px; 
+    height: 100vh; 
+    width: 100vw; 
+    background-image: url('./images/BackgroundHero.png'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,8 +185,8 @@ section.hero {
     background-color: white;
     text-align: center;
     font-size: 2rem;
-    margin: 0; /* Remove qualquer margem padrão */
-    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos nas dimensões */
+    margin: 0; 
+    box-sizing: border-box; 
 }
 
 .hero h2 {
@@ -208,7 +218,10 @@ section.hero {
     background-color: var(--buttonhover);
 }
 
-/* Estilo Seções Gerais */
+
+
+
+/*---------------------------- Estilo Seções Gerais -------------------------------*/
 .section {
     padding: 80px 0;
     text-align: center;
@@ -230,22 +243,8 @@ section.hero {
     line-height: 1.7;
 }
 
-/* Hero Section */
 
 
-/* Seção Nossa História */
-.historia {
-    background-color: #e6f7ff;
-}
-
-.historia h2 {
-    color: #003366;
-}
-
-.historia p {
-    font-size: 1.2rem;
-    color: #333;
-}
 
 
 
@@ -258,7 +257,7 @@ section.hero {
 /*---------------------------------------------PRODUTOS--------------------------------------------*/
 
 
-/* Seção de Produtos */
+
 .products-section {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -268,10 +267,10 @@ section.hero {
 .products-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primarycolor); /* Azul escuro */
+    color: var(--primarycolor); 
 }
 
-/* Grid dos produtos */
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -280,7 +279,7 @@ section.hero {
     margin: 0 auto;
 }
 
-/* Estilo dos cards de produto */
+
 .product-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -311,16 +310,16 @@ section.hero {
     line-height: 1.6;
 }
 
-/* Efeito hover nos cards */
+
 .product-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade para tablets e smartphones */
+
 @media (max-width: 768px) {
     .products-grid {
-        grid-template-columns: 1fr 1fr; /* 2 colunas em telas menores */
+        grid-template-columns: 1fr 1fr; 
         gap: 20px;
     }
 
@@ -335,11 +334,11 @@ section.hero {
 
 @media (max-width: 480px) {
     .products-grid {
-        grid-template-columns: 1fr; /* Uma única coluna em telas muito pequenas */
+        grid-template-columns: 1fr; 
     }
 }
 
-/* Fade-in básico */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -360,7 +359,7 @@ section.hero {
 
 /* --------------------------------------------SERVIÇOS------------------------------------- */
 
-/* Seção de Serviços */
+
 .services-section {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -373,7 +372,7 @@ section.hero {
     color: #003366;
 }
 
-/* Grid dos serviços */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -388,7 +387,7 @@ section.hero {
     max-width: 1200px;
 }
 
-/* Estilo dos cards de serviço */
+
 .service-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -413,19 +412,19 @@ section.hero {
     line-height: 1.6;
 }
 
-/* Ícones */
+
 .service-card i {
     font-size: 2.5rem;
     color: #0077b6;
 }
 
-/* Efeito hover nos cards */
+
 .service-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade para tablets e smartphones */
+
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr 1fr;
@@ -447,7 +446,7 @@ section.hero {
     }
 }
 
-/* Fade-in básico */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -466,7 +465,7 @@ section.hero {
 
 /* --------------------------------------------CONTATO------------------------------------------------ */
 
-/* Seção de Contato */
+
 .contact-section {
     padding: 60px 20px;
     text-align: center;
@@ -486,7 +485,7 @@ section.hero {
     gap: 50px;
 }
 
-/* Informações de contato */
+
 .contact-info {
     text-align: left;
 }
@@ -508,7 +507,7 @@ section.hero {
     margin-right: 10px;
 }
 
-/* Redes sociais */
+
 .social-media h4 {
     margin-top: 20px;
     font-size: 1.2rem;
@@ -526,7 +525,7 @@ section.hero {
     color: #005580;
 }
 
-/* Formulário de Contato */
+
 .contact-form {
     text-align: left;
 }
@@ -575,7 +574,7 @@ section.hero {
     background-color: #005580;
 }
 
-/* Fade-in */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -592,7 +591,7 @@ section.hero {
 
 
 
-/* Footer */
+/* -------------------------------------------FOOTER------------------------------------- */
 footer {
     background-color: #333;
     color: white;
@@ -639,7 +638,7 @@ footer a:hover {
 .about-content h2 {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #003366; /* Azul escuro para destaque */
+    color: #003366; 
     margin-bottom: 20px;
 }
 
@@ -652,7 +651,7 @@ footer a:hover {
 
 .about-content h3 {
     font-size: 1.5rem;
-    color: #005580; /* Outro tom de azul */
+    color: #005580; 
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -671,11 +670,11 @@ footer a:hover {
 }
 
 .about-content ul li::before {
-    content: "✓"; /* Símbolo de check */
+    content: "✓"; 
     position: absolute;
     left: 0;
     top: 0;
-    color: #009688; /* Verde suave */
+    color: #009688; 
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -690,7 +689,7 @@ footer a:hover {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Efeito de hover na caixa de texto */
+
 .about-content:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -702,20 +701,20 @@ footer a:hover {
     text-align: center;
 }
 
-/* Inicialmente oculto para o efeito fade-in */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Quando a classe .visible é adicionada pelo JS, o fade-in é ativado */
+
 .visible {
     opacity: 1;
     transform: translateY(0);
 } 
 
-/* Estilo da grade e conteúdo */
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -874,13 +873,13 @@ footer a:hover {
     .about-content{
         margin-bottom: 10%;
     }
-    .about-image {  /* Classe das imagens */
-        display: none; /* Oculta as imagens */
+    .about-image {  
+        display: none; 
         width: 0px;
         height: 0px;
     }
 
-    /* Estilos adicionados para a aba de avaliações */
+    
     .reviews-tab {
         display: flex;
         flex-direction: column;
@@ -909,7 +908,7 @@ footer a:hover {
         border-bottom: none;
     }
 
-    /* Centraliza e ajusta as avaliações em telas pequenas */
+    
     .reviews-tab .review-content {
         font-size: 1rem;
         margin-bottom: 10px;
@@ -918,22 +917,22 @@ footer a:hover {
 }
 
 
-/* Grid de produtos e serviços para telas pequenas */
+
 @media (max-width: 768px) {
-    /* Ajuste de espaço na aba de avaliações */
+   
     .reviews-tab {
         margin: 20px 0;
     }
 }
 
-/* Para tablets */
+
 @media (max-width: 1024px) {
     .products-grid, .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 
-    /* Ajustes para a aba de avaliações em tablets */
+    
     .reviews-tab {
         padding: 30px;
     }
@@ -951,7 +950,7 @@ footer a:hover {
     }
 }
 
-/* Ajustes gerais para texto e layout */
+
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 1.5rem;
@@ -994,14 +993,14 @@ footer a:hover {
         font-size: 16px;
     }
 
-    /* Ajuste de layout final para a aba de avaliações */
+    
     .reviews-tab {
         width: 100%;
     }
 }
-/* Responsividade para a seção de avaliações */
 
-/* Estilo geral para avaliações */
+
+
 .reviews-section {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -1052,7 +1051,7 @@ footer a:hover {
     line-height: 1.5;
 }
 
-/* Para telas pequenas, exibir as avaliações em uma coluna */
+
 @media (max-width: 768px) {
      .reviews-grid {
         grid-template-columns: 1fr;
@@ -1072,7 +1071,7 @@ footer a:hover {
     } 
 }
 
-/* Para tablets, exibir as avaliações em duas colunas */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .reviews-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1080,7 +1079,7 @@ footer a:hover {
     }
 }
 
-/* Ajustes para a seção de contato em telas pequenas */
+
 @media (max-width: 768px) {
     .contact-section {
         padding: 20px;
@@ -1089,11 +1088,11 @@ footer a:hover {
     .contact-grid {
         display: flex;
         flex-direction: column;
-        gap: 20px; /* Espaçamento entre os itens */
+        gap: 20px; 
     }
 
     .contact-info, .contact-form {
-        width: 100%; /* Garantir que os elementos ocupem 100% da largura disponível */
+        width: 100%; 
     }
 
     .contact-info {
@@ -1101,15 +1100,15 @@ footer a:hover {
     }
 
     .contact-info h3, .contact-form h3 {
-        font-size: 1.5rem; /* Ajuste de tamanho para caber melhor na tela */
+        font-size: 1.5rem; 
     }
 
     .contact-info p, .contact-form label, .contact-form input, .contact-form textarea {
-        font-size: 1rem; /* Reduzindo levemente o tamanho da fonte */
+        font-size: 1rem; 
     }
 
     .contact-form input, .contact-form textarea {
-        width: 100%; /* Largura completa para inputs e textarea */
+        width: 100%; 
         padding: 10px;
         margin-bottom: 10px;
         font-size: 1rem;
@@ -1120,38 +1119,18 @@ footer a:hover {
     }
 
     .contact-form button {
-        width: 100%; /* O botão ocupará toda a largura disponível */
+        width: 100%; 
         padding: 12px;
         font-size: 1.2rem;
     }
 
     .social-media a {
-        font-size: 1.5rem; /* Ajustando o tamanho dos ícones de redes sociais */
+        font-size: 1.5rem; 
     }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilo principal da seção de serviços */
 .services-section {
     padding: 40px 20px;
     text-align: center;
@@ -1160,8 +1139,8 @@ footer a:hover {
 .services-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza os cartões */
-    gap: 30px; /* Espaçamento entre os cartões */
+    justify-content: center; 
+    gap: 30px; 
     padding: 20px;
 }
 
@@ -1171,34 +1150,40 @@ footer a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex: 1 1 calc(33.33% - 40px); /* Cartões ocupam 1/3 da largura */
-    min-width: 250px; /* Tamanho mínimo */
-    max-width: 300px; /* Tamanho máximo */
-    transition: transform 0.3s ease; /* Adiciona uma animação */
+    flex: 1 1 calc(33.33% - 40px); 
+    min-width: 250px; 
+    max-width: 300px; 
+    transition: transform 0.3s ease; 
 }
 
-/* Efeito hover para os cartões */
+
 .service-card:hover {
     transform: scale(1.05);
 }
 
-/* Ajuste para ícones */
+
 .service-card i {
     font-size: 40px;
-    color: #0056b3; /* Cor do ícone */
+    color: #0056b3; 
     margin-bottom: 15px;
 }
 
-/* Ajuste para telas pequenas */
+
 @media (max-width: 768px) {
     .service-card {
-        flex: 1 1 calc(50% - 20px); /* Ocupa 50% da largura em telas menores */
+        flex: 1 1 calc(50% - 20px); 
     }
 }
 
 @media (max-width: 480px) {
     .service-card {
-        flex: 1 1 100%; /* Em telas muito pequenas, cada cartão ocupa 100% */
+        flex: 1 1 100%; 
+    }
+    .products-grid{
+        display: block;
+    }
+    .product-card{
+        margin-bottom: 20px;
     }
 }
 

@@ -1,4 +1,4 @@
-// Scroll suave ao clicar no menu
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -19,13 +19,13 @@ window.addEventListener("scroll", function() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Rolando para baixo - diminuir navbar e seu conteúdo
-    navbar.style.height = "60px";  // Diminui a altura da barra de navegação
+    
+    navbar.style.height = "60px";  
     navList.style.top = "59px";
     
 
-    ctaButton.style.padding = "5px 10px";  // Diminui o padding do botão CTA
-    ctaButton.style.fontSize = "14px";  // Diminui o tamanho da fonte do botão CTA
+    ctaButton.style.padding = "5px 10px";  
+    ctaButton.style.fontSize = "14px";  
     if (navList.classList.contains('show-menu')) {
         navbar.style.height = "100px";
         navList.style.top = "101px"; }
@@ -33,20 +33,20 @@ window.addEventListener("scroll", function() {
 
 
   else {
-    // Rolando para cima - restaurar navbar e seu conteúdo
-    navbar.style.height = "100px";  // Restaurar a altura da barra de navegação
-    logoText.style.fontSize = "26px";  // Restaurar o tamanho da logo
-    navLinks.forEach(link => link.style.fontSize = "16px");  // Restaurar o tamanho dos links do menu
-    ctaButton.style.padding = "10px 20px";  // Restaurar o padding do botão CTA
-    ctaButton.style.fontSize = "16px";  // Restaurar o tamanho da fonte do botão CTA
+    
+    navbar.style.height = "100px";  
+    logoText.style.fontSize = "26px";  
+    navLinks.forEach(link => link.style.fontSize = "16px");  
+    ctaButton.style.padding = "10px 20px";  
+    ctaButton.style.fontSize = "16px";  
   }
 
   lastScrollTop = scrollTop;
 });
 
-// Texto a ser digitado
+
 const text = "A melhor loja de informática de blumenau. simplesmente, newtech!";
-const speed = 45;  // Velocidade da digitação (em milissegundos)
+const speed = 45;  
 
 let index = 0;
 
@@ -54,11 +54,11 @@ function typeEffect() {
     if (index < text.length) {
         document.getElementById("typed-text").innerHTML += text.charAt(index);
         index++;
-        setTimeout(typeEffect, speed);  // Chama a função de novo até terminar
+        setTimeout(typeEffect, speed);  
     }
 }
 
-// Inicia o efeito de digitação ao carregar a página
+
 window.onload = function() {
     typeEffect();
     
@@ -83,11 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 if (history.scrollRestoration) {
-    history.scrollRestoration = 'manual'; // Desativa o comportamento padrão de restaurar o scroll
+    history.scrollRestoration = 'manual'; 
 }
 
 window.onbeforeunload = function () {
-    window.scrollTo(0, 0); // Força o scroll para o topo antes de recarregar
+    window.scrollTo(0, 0); 
 };
 
 const mobileMenu = document.getElementById('mobile-menu');
